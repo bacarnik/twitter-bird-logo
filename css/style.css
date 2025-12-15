@@ -33,6 +33,28 @@ body{
     align-items: center;
     gap: 8px;
 }
+#logo {
+    position: relative;
+    display: inline-block;
+}
+.logo-tooltip {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);    
+    background-color: #14171a;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+#logo:hover .logo-tooltip {
+    opacity: 1;
+}
 #logo-img {
     height: 30px;
     width: auto;
@@ -66,11 +88,9 @@ body{
     max-width: 900px;
     margin: 70px auto 40px;
     display: flex;
-    gap: 16px;              
 }
 #left-container {
     width: 260px; 
-    margin-top: 70px;
 }
 #user-container {
     background: #ffffff;
@@ -81,52 +101,62 @@ body{
 }
 #user-background {
     height: 90px;
-    background: #000;        
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);        
     background-size: cover;
     background-position: center;
 }
 #user-icon-container {
   position: relative;
-  padding: 10px 12px 12px;
+  padding: 10px 12px 1px;
   display: flex;
   align-items: center;
   column-gap: 8px;
 }
-
+#user-icon {
+  width: 60px;
+  height: 60px;
+  margin-top: -50px;
+  border-radius: 10%;
+  background-image: url(../images/user-icon.png);
+  background-size: cover;
+}
 #user-text {
   display: flex;
-  flex-direction: column; /* name above handle */
+  flex-direction: column;
 }
-
 #user-name {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
 }
-
 #user-handle {
   font-size: 13px;
   color: #657786;
 }
 #user-stats {
-    display: block;
-    margin: 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    display: flex;
+    gap: 24px;
+    padding: 12px;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+.stat-label {
+    font-size: 13px;
     color: #657786;
 }
 .stat-number {
-    font-weight: bold;
-    font-size: 17px;
-    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    color: #14171a;
 }
-
 
 
 /* Center column styles */
 .center-container {
     max-width: 700px;
-    margin: 70px auto 40px;
+    margin: auto 40px;
     flex:1;
 }
 .tweet-container{
@@ -143,8 +173,14 @@ body{
 .icon-container {
     width: 35px;
     height: 35px;
+    position: relative;
+    display: inline-block;
     border-radius: 50%;
     margin-right: 10px;
+    cursor: pointer;
+}
+.icon-container:hover .logo-tooltip {
+    opacity: 1;
 }
 .tweet-header-info {
     display: flex;
@@ -171,7 +207,6 @@ body{
     background: #0080ff;
     margin-bottom: 8px;
 }
-
 .tweet-meta {
     display: flex;
     gap: 16px;

@@ -12,6 +12,7 @@
       <div id="top-left">
         <div id="logo">
           <img src="images/Twitter_bird.png" alt="Twitter logo" id="logo-img">
+          <div class="logo-tooltip">This is the original PNG logo</div>
         </div>
         <div id="brand-text">Old Twitter</div>
       </div>
@@ -28,70 +29,83 @@
 
   <div id="main">
     <div id="left-container">
-        <div id="user-container">
-            <div id="user-background"></div>
-            <div id="user-icon-container">
-                <div id="user-icon"></div>
-                <div id="user-name">John Doe</div>
-                <div id="user-handle">@johndoe</div>
-            </div>
-            <div id="user-stats">                
-                <div class="stat-label">Tweets</div>
-                <div class="stat-number">150</div>
-            </div>
+      <div id="user-container">
+        <div id="user-background"></div>
+        <div id="user-icon-container">
+          <div id="user-icon"></div>
+          <div id="user-text">
+            <div id="user-name">John Doe</div>
+            <div id="user-handle">@johndoe</div>
+          </div>
         </div>
+
+        <div id="user-stats">    
+          <div class="stat">
+            <div class="stat-label">TWEETS</div>
+            <div class="stat-number">150</div>
+          </div>            
+
+          <div class="stat">
+            <div class="stat-label">FOLLOWING</div>
+            <div class="stat-number">237</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-label">FOLLOWERS</div>
+            <div class="stat-number">1,842</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="center-container">
-        <div class="tweet-container">
-            <div class="tweet-head">
-                <div class="icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                    xmlns:svg="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="40px" height="40px"
-                    viewBox="0 0 512 512">
-                    <path id="scv-path"
-                        fill="black" stroke="black" stroke-width="0"
-                        d="M 417.01,94.98
-                        C 393.43,66.64 334.12,48.43 288.94,83.97
-                            245.71,114.81 247.11,166.14 253.61,182.89
-                            253.61,182.89 253.57,182.91 253.57,182.91
-                            170.18,180.01 101.34,140.95 53.00,82.00
-                            24.71,129.59 43.99,185.22 83.00,211.00
-                            66.66,211.48 48.78,206.49 39.00,199.00
-                            39.55,247.76 72.39,285.63 116.00,295.00
-                            110.89,298.67 86.05,300.72 73.00,297.00
-                            86.75,341.61 129.48,364.00 163.00,364.00
-                            123.90,396.73 69.16,410.52 21.00,404.00
-                            204.86,521.78 447.99,396.38 444.00,159.00
-                            465.26,144.70 485.35,121.83 490.92,109.93
-                            464.51,121.12 442.88,124.94 437.01,124.01
-                            456.75,113.32 475.32,88.55 478.00,71.00
-                            471.31,79.66 422.29,95.38 417.00,94.97" />
-                    </svg>
-                </div>
-                <div class="tweet-header-info">
-                    <div class="tweet-name">Anonymous twitter user</div>
-                    <div class="tweet-handle">@Anony · 2h</div>
-                </div>
-            </div>
+      <div class="tweet-container">
+        <div class="tweet-head">
+          <div class="icon-container" id="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40px" height="40px" viewBox="0 0 512 512" id="twitter-svg">
+              <path
+                  fill="#1da1f2"
+                  d="M 417.01,94.98
+                    C 393.43,66.64 334.12,48.43 288.94,83.97
+                      245.71,114.81 247.11,166.14 253.61,182.89
+                      170.18,180.01 101.34,140.95 53.00,82.00
+                      24.71,129.59 43.99,185.22 83.00,211.00
+                      66.66,211.48 48.78,206.49 39.00,199.00
+                      39.55,247.76 72.39,285.63 116.00,295.00
+                      110.89,298.67 86.05,300.72 73.00,297.00
+                      86.75,341.61 129.48,364.00 163.00,364.00
+                      123.90,396.73 69.16,410.52 21.00,404.00
+                      204.86,521.78 447.99,396.38 444.00,159.00
+                      465.26,144.70 485.35,121.83 490.92,109.93
+                      464.51,121.12 442.88,124.94 437.01,124.01
+                      456.75,113.32 475.32,88.55 478.00,71.00
+                      471.31,79.66 422.29,95.38 417.00,94.97" />
+              </svg>
+              <div class="logo-tooltip">This is the original SVG logo</div>
+          </div>
 
-            <div class="tweet-text">This is the Twitter logo drawn on a canvas element using JavaScript.</div>
-
-            <div class="tweet-image">
-                <canvas id="canvas" width="1024" height="1024" style="width:512px; height:512px;"></canvas>
-            </div>
-
-            <div class="tweet-meta">
-                <div class="tweet-meta-item">18 Replies</div>
-                <div class="tweet-meta-item">547 Retweets</div>
-                <div class="tweet-meta-item">5,660 Likes</div>
-            </div>
+          <div class="tweet-header-info">
+              <div class="tweet-name">Anonymous twitter user</div>
+              <div class="tweet-handle">@Anony · 2h</div>
+          </div>
         </div>
+
+        <div class="tweet-text">This is the Twitter logo drawn on a canvas element using JavaScript.</div>
+
+        <div class="tweet-image">
+          <canvas id="canvas" width="1024" height="1024" style="width:512px; height:512px;"></canvas>
+        </div>
+
+        <div class="tweet-meta">
+          <div class="tweet-meta-item">18 Replies</div>
+          <div class="tweet-meta-item">547 Retweets</div>
+          <div class="tweet-meta-item">5,660 Likes</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="scripts/twitter-logo-canvas.js"></script>
+  <script src="scripts/copy-svg.js"></script>
 </body>
 </html>
