@@ -1,4 +1,4 @@
-# 🐦 Twitter Clone
+<h1 aling="center">Twitter Clone</h1>
 
 A simple front-end **Twitter clone** inspired by the classic Twitter layout.  
 The project focuses on **SVG, Canvas, and image usage** of the Twitter bird logo.
@@ -11,7 +11,7 @@ The project focuses on **SVG, Canvas, and image usage** of the Twitter bird logo
 
 
 🔗 Open the website here:  
-[https://YOUR-USERNAME.github.io/twitter-bird-logo/](https://bacarnik.github.io/twitter-bird-logo/)
+[https://bacarnik.github.io/twitter-bird-logo/]
 
 ---
 
