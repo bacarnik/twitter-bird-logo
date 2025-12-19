@@ -43,10 +43,10 @@ twitter-bird-logo/
 │ └─ twitter-logo-canvas.js
 │
 └─ images/
-├─ twitter_bird.png
-├─ twitter.svg
-├─ Twitter_bird.xcf
-└─ user-icon.png
+  ├─ twitter_bird.png
+  ├─ twitter.svg
+  ├─ Twitter_bird.xcf
+  └─ user-icon.png
 ```
 ---
 
