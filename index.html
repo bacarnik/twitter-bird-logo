@@ -2,113 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter</title>
   <link rel="icon" type="image/x-icon" href="images/twitter_bird.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="top">
-    <div id="top-container">
-      <div id="top-left">
-        <div id="logo">
-          <img src="images/twitter_bird.png" alt="Twitter logo" id="logo-img">
-          <div class="logo-tooltip">This is the original PNG logo</div>
-        </div>
-        <div id="brand-text">Old Twitter</div>
-      </div>
-      <div id="top-right">
-        <div id="search">
-          <input type="text" id="search-input" placeholder="Search">
-        </div>
-        <div id="tweet-button-container">
-          <button id="tweet-button">Tweet</button>
-        </div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <canvas id="twitter-logo" width="48" height="48"></canvas>
+      <h1>See what's happening right now.</h1>
+      <p>Find community, conversation and inspiration about the things you love.</p>
+      
+      <div class="search-container">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" placeholder="Search for stuff like #NationalLipstickDay or Carlos Gomez" class="search-input">
       </div>
     </div>
-  </div>
+  </header>
 
-  <div id="main">
-    <div id="left-container">
-      <div id="user-container">
-        <div id="user-background"></div>
-        <div id="user-icon-container">
-          <div id="user-icon"></div>
-          <div id="user-text">
-            <div id="user-name">John Doe</div>
-            <div id="user-handle">@johndoe</div>
-          </div>
-        </div>
-
-        <div id="user-stats">    
-          <div class="stat">
-            <div class="stat-label">TWEETS</div>
-            <div class="stat-number">150</div>
-          </div>            
-
-          <div class="stat">
-            <div class="stat-label">FOLLOWING</div>
-            <div class="stat-number">237</div>
-          </div>
-
-          <div class="stat">
-            <div class="stat-label">FOLLOWERS</div>
-            <div class="stat-number">1,842</div>
-          </div>
-        </div>
-      </div>
+  <!-- Category Navigation -->
+  <nav class="category-nav">
+    <div class="category-container">
+      <button class="category-btn active">Popular accounts</button>
+      <button class="category-btn">Sports</button>
+      <button class="category-btn">News</button>
+      <button class="category-btn">Entertainment</button>
+      <button class="category-btn">Fun</button>
+      <button class="category-btn">Lifestyle</button>
+      <button class="category-btn">Music</button>
     </div>
+  </nav>
 
-    <div class="center-container">
-      <div class="tweet-container">
-        <div class="tweet-head">
-          <div class="icon-container" id="svg-container">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40px" height="40px" viewBox="0 0 512 512" id="twitter-svg">
-              <path
-                  fill="#1da1f2"
-                  d="M 417.01,94.98
-                    C 393.43,66.64 334.12,48.43 288.94,83.97
-                      245.71,114.81 247.11,166.14 253.61,182.89
-                      170.18,180.01 101.34,140.95 53.00,82.00
-                      24.71,129.59 43.99,185.22 83.00,211.00
-                      66.66,211.48 48.78,206.49 39.00,199.00
-                      39.55,247.76 72.39,285.63 116.00,295.00
-                      110.89,298.67 86.05,300.72 73.00,297.00
-                      86.75,341.61 129.48,364.00 163.00,364.00
-                      123.90,396.73 69.16,410.52 21.00,404.00
-                      204.86,521.78 447.99,396.38 444.00,159.00
-                      465.26,144.70 485.35,121.83 490.92,109.93
-                      464.51,121.12 442.88,124.94 437.01,124.01
-                      456.75,113.32 475.32,88.55 478.00,71.00
-                      471.31,79.66 422.29,95.38 417.00,94.97" />
-              </svg>
-              <div class="logo-tooltip">This is the original SVG logo</div>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      <!-- Topics Grid -->
+      <section class="topics-grid">
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <span class="topic-emoji">🎬</span>
           </div>
+          <div class="topic-content">
+            <h3>Movies</h3>
+            <p>The latest blockbusters, indie gems, and everything cinema.</p>
+          </div>
+        </article>
 
-          <div class="tweet-header-info">
-              <div class="tweet-name">Anonymous twitter user</div>
-              <div class="tweet-handle">@Anony · 2h</div>
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <span class="topic-emoji">🎵</span>
+          </div>
+          <div class="topic-content">
+            <h3>Music</h3>
+            <p>New releases, concerts, and your favorite artists.</p>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <span class="topic-emoji">⚽</span>
+          </div>
+          <div class="topic-content">
+            <h3>Sports</h3>
+            <p>Live scores, highlights, and sports commentary.</p>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <span class="topic-emoji">📰</span>
+          </div>
+          <div class="topic-content">
+            <h3>News</h3>
+            <p>Breaking stories and headlines from around the world.</p>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <span class="topic-emoji">😂</span>
+          </div>
+          <div class="topic-content">
+            <h3>Fun</h3>
+            <p>Memes, jokes, and viral content to brighten your day.</p>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="topic-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+            <span class="topic-emoji">✨</span>
+          </div>
+          <div class="topic-content">
+            <h3>Lifestyle</h3>
+            <p>Fashion, food, travel, and everyday inspiration.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Login Form -->
+      <aside class="login-sidebar">
+        <div class="login-card">
+          <h2>Log in to Twitter</h2>
+          <form id="login-form">
+            <div class="form-group">
+              <input type="text" placeholder="Phone, email, or username" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-input" required>
+            </div>
+            <button type="submit" class="login-btn">Log in</button>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </form>
+          
+          <div class="signup-section">
+            <p>New to Twitter?</p>
+            <button class="signup-btn">Sign up</button>
           </div>
         </div>
-
-        <div class="tweet-text">This is the Twitter logo drawn on a canvas element using JavaScript.</div>
-
-        <div class="tweet-image">
-          <canvas id="canvas" width="1024" height="1024" style="width:512px; height:512px;"></canvas>
-        </div>
-
-        <div class="tweet-meta">
-          <div class="tweet-meta-item">18 Replies</div>
-          <div class="tweet-meta-item">547 Retweets</div>
-          <div class="tweet-meta-item">5,660 Likes</div>
-        </div>
-      </div>
-      <div class="tweet-container"></div>
+      </aside>
     </div>
-  </div>
+  </main>
 
-  <script src="scripts/twitter-logo-canvas.js"></script>
-  <script src="scripts/copy-svg.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Help Center</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Cookies</a>
+      <a href="#">Ads info</a>
+      <a href="#">Brand</a>
+      <a href="#">Blog</a>
+      <a href="#">Status</a>
+      <a href="#">Apps</a>
+      <a href="#">Jobs</a>
+      <a href="#">Advertise</a>
+      <a href="#">Businesses</a>
+      <a href="#">Developers</a>
+      <a href="#">Directory</a>
+      <a href="#">Settings</a>
+    </div>
+    <p class="copyright">© 2015 Twitter, Inc.</p>
+  </footer>
+
+  <script>
+    // Draw Twitter bird on canvas
+    function drawTwitterBird(canvas) {
+      const ctx = canvas.getContext('2d');
+      const size = canvas.width;
+      
+      ctx.clearRect(0, 0, size, size);
+      ctx.fillStyle = '#ffffff';
+      
+      // Scale the path to fit canvas
+      ctx.save();
+      ctx.scale(size / 24, size / 24);
+      
+      // Twitter bird path
+      ctx.beginPath();
+      ctx.moveTo(23.643, 4.937);
+      ctx.bezierCurveTo(22.808, 5.307, 21.911, 5.557, 20.968, 5.67);
+      ctx.bezierCurveTo(21.93, 5.094, 22.668, 4.18, 23.016, 3.092);
+      ctx.bezierCurveTo(22.116, 3.626, 21.119, 4.014, 20.058, 4.222);
+      ctx.bezierCurveTo(19.208, 3.318, 17.998, 2.752, 16.658, 2.752);
+      ctx.bezierCurveTo(14.086, 2.752, 12, 4.838, 12, 7.412);
+      ctx.bezierCurveTo(12, 7.776, 12.042, 8.13, 12.12, 8.472);
+      ctx.bezierCurveTo(8.247, 8.277, 4.816, 6.422, 2.518, 3.604);
+      ctx.bezierCurveTo(2.118, 4.294, 1.888, 5.094, 1.888, 5.946);
+      ctx.bezierCurveTo(1.888, 7.562, 2.711, 8.989, 3.96, 9.824);
+      ctx.bezierCurveTo(3.196, 9.799, 2.478, 9.59, 1.85, 9.241);
+      ctx.lineTo(1.85, 9.301);
+      ctx.bezierCurveTo(1.85, 11.558, 3.455, 13.441, 5.587, 13.869);
+      ctx.bezierCurveTo(5.195, 13.975, 4.784, 14.031, 4.36, 14.031);
+      ctx.bezierCurveTo(4.06, 14.031, 3.767, 14.003, 3.483, 13.949);
+      ctx.bezierCurveTo(4.076, 15.799, 5.796, 17.147, 7.835, 17.183);
+      ctx.bezierCurveTo(6.24, 18.433, 4.231, 19.178, 2.049, 19.178);
+      ctx.bezierCurveTo(1.673, 19.178, 1.302, 19.156, 0.937, 19.113);
+      ctx.bezierCurveTo(2.999, 20.436, 5.447, 21.206, 8.077, 21.206);
+      ctx.bezierCurveTo(16.647, 21.206, 21.332, 14.108, 21.332, 7.952);
+      ctx.bezierCurveTo(21.332, 7.752, 21.327, 7.55, 21.318, 7.35);
+      ctx.bezierCurveTo(22.228, 6.692, 23.018, 5.873, 23.641, 4.94);
+      ctx.closePath();
+      ctx.fill();
+      
+      ctx.restore();
+    }
+
+    // Category button click handler
+    function setupCategoryNav() {
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    }
+
+    // Login form handler
+    function setupLoginForm() {
+      const form = document.getElementById('login-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Login functionality would be implemented here!');
+      });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      const canvas = document.getElementById('twitter-logo');
+      drawTwitterBird(canvas);
+      setupCategoryNav();
+      setupLoginForm();
+    });
+  </script>
 </body>
-
-</html>
-
