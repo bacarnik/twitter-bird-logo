@@ -114,7 +114,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
     const newWindow = window.open('', '_blank');
     newWindow.document.write(`
       <img src="${imgSrc}" alt="Twitter PNG" style="max-width: 100%; display: block; margin: auto;">
-      <button onclick="downloadImage('${imgSrc}', 'twitter_bird.png')">Download</button>
+      <button onclick="window.opener.downloadImage('${imgSrc}', 'twitter_bird.png')">Download</button>
     `);
     newWindow.document.close();
   } else if (title === 'Twitter SVG') {
