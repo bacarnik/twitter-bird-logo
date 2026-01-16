@@ -15,10 +15,9 @@ function openPreview(card) {
     title: 'Preview',
     html: `<div id="previewBox" style="text-align:center"></div>`,
     showCancelButton: true,
-    showConfirmButton: true,
+    showConfirmButton: false,
     confirmButtonText: 'Copy',
     cancelButtonText: 'Download PNG',
-    confirmButtonColor: '#1DA1F2',
     didOpen: () => {
       const box = document.getElementById('previewBox');
 
@@ -111,14 +110,12 @@ document.querySelector('.topics-grid').addEventListener('click', e => {
         ${svgPath}
         <button id="copy-svg" class="tw-btn">Copy SVG</button>
       `,
-      showConfirmButton: false,
       didRender: () => {
         document.getElementById('copy-svg').onclick = () => {
           navigator.clipboard.writeText(svgPath);
           Swal.fire({
             icon: 'success',
             title: 'Copied!',
-            confirmButtonColor: '#1DA1F2'
           });
         };
       }
@@ -133,7 +130,6 @@ document.querySelector('.topics-grid').addEventListener('click', e => {
         <canvas id="c" width="512" height="512"></canvas>
         <button id="copy-canvas" class="tw-btn">Copy Path</button>
       `,
-      showConfirmButton: false,
       didRender: () => {
         const ctx = document.getElementById('c').getContext('2d');
         eval(code);
@@ -144,7 +140,6 @@ document.querySelector('.topics-grid').addEventListener('click', e => {
           Swal.fire({
             icon: 'success',
             title: 'Copied!',
-            confirmButtonColor: '#1DA1F2'
           });
         };
       }
