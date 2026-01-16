@@ -18,6 +18,7 @@ function openPreview(card) {
     showConfirmButton: true,
     confirmButtonText: 'Copy SVG',
     cancelButtonText: 'Download PNG',
+    confirmButtonColor: '#1DA1F2',
     didOpen: () => {
       const box = document.getElementById('previewBox');
 
@@ -116,6 +117,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       html: `<img src="${imgSrc}" alt="Twitter PNG" style="max-width: 100%; display: block; margin: auto;">
              <button id="download-png" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Download</button>`,
       showConfirmButton: false,
+      confirmButtonColor: '#1DA1F2',
       didRender: () => {
         document.getElementById('download-png').addEventListener('click', () => {
           downloadImage(imgSrc, 'twitter_bird.png');
@@ -133,6 +135,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       html: `<div>${svgPath}</div>
              <button id="copy-svg" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy SVG Code</button>`,
       showConfirmButton: false,
+      confirmButtonColor: '#1DA1F2',
       didRender: () => {
         document.getElementById('copy-svg').addEventListener('click', () => {
           navigator.clipboard.writeText(svgPath).then(() => {
@@ -149,6 +152,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       html: `<canvas id="dynamicCanvas" width="512" height="512" style="display: block; margin: auto; border: 1px solid #000;"></canvas>
              <button id="copy-canvas" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy Canvas Path</button>`,
       showConfirmButton: false,
+      confirmButtonColor: '#1DA1F2',
       didRender: () => {
         const canvas = document.getElementById('dynamicCanvas');
         const ctx = canvas.getContext('2d');
@@ -157,7 +161,12 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
         ctx.fill();
         document.getElementById('copy-canvas').addEventListener('click', () => {
           navigator.clipboard.writeText(canvasCode).then(() => {
-            Swal.fire('Copied!', 'Canvas path code has been copied to clipboard.', 'success');
+            Swal.fire({
+              title: 'Copied!',
+              text: 'Canvas path code has been copied to clipboard.',
+              icon: 'success',
+              confirmButtonColor: '#1DA1F2' // stari Twitter modri
+            });
           });
         });
       }
