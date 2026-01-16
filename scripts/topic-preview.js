@@ -109,17 +109,58 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
   const title = article.querySelector('h3').innerText;
 
   if (title === 'Twitter PNG') {
-    // Open PNG in a new window with download option
+    // Show PNG in SweetAlert with download option
     const imgSrc = 'images/twitter_bird.png';
-    
+    Swal.fire({
+      title: 'Twitter PNG',
+      html: `<img src="${imgSrc}" alt="Twitter PNG" style="max-width: 100%; display: block; margin: auto;">
+             <button id="download-png" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Download</button>`,
+      showConfirmButton: false,
+      didRender: () => {
+        document.getElementById('download-png').addEventListener('click', () => {
+          downloadImage(imgSrc, 'twitter_bird.png');
+        });
+      }
+    });
   } else if (title === 'Twitter SVG') {
-    // Open SVG in a new window with copy option
+    // Show SVG in SweetAlert with copy option
     const svgPath = `<svg viewBox="0 0 512 512" style="width: 100%; height: 100%; object-fit: contain;">
       <path fill="#1DA1F2" stroke="#1DA1F2" stroke-width="0"
         d="M 417.01,94.98 C 393.43,66.64 334.12,48.43 288.94,83.97 245.71,114.81 247.11,166.14 253.61,182.89 253.61,182.89 253.57,182.91 253.57,182.91 170.18,180.01 101.34,140.95 53.00,82.00 24.71,129.59 43.99,185.22 83.00,211.00 66.66,211.48 48.78,206.49 39.00,199.00 39.55,247.76 72.39,285.63 116.00,295.00 110.89,298.67 86.05,300.72 73.00,297.00 86.75,341.61 129.48,364.00 163.00,364.00 123.90,396.73 69.16,410.52 21.00,404.00 204.86,521.78 447.99,396.38 444.00,159.00 465.26,144.70 485.35,121.83 490.92,109.93 464.51,121.12 442.88,124.94 437.01,124.01 456.75,113.32 475.32,88.55 478.00,71.00 471.31,79.66 422.29,95.38 417.00,94.97" />
     </svg>`;
+    Swal.fire({
+      title: 'Twitter SVG',
+      html: `${svgPath}
+             <button id="copy-svg" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy SVG Code</button>`,
+      showConfirmButton: false,
+      didRender: () => {
+        document.getElementById('copy-svg').addEventListener('click', () => {
+          navigator.clipboard.writeText(svgPath).then(() => {
+            Swal.fire('Copied!', 'SVG code has been copied to clipboard.', 'success');
+          });
+        });
+      }
+    });
   } else if (title === 'Twitter Canvas') {
-    // Open Canvas in a new window with copy option
+    // Show Canvas in SweetAlert with copy option
     const canvasCode = canvasPathCode();
+    Swal.fire({
+      title: 'Twitter Canvas',
+      html: `<canvas id="dynamicCanvas" width="512" height="512" style="display: block; margin: auto; border: 1px solid #000;"></canvas>
+             <button id="copy-canvas" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy Canvas Path</button>`,
+      showConfirmButton: false,
+      didRender: () => {
+        const canvas = document.getElementById('dynamicCanvas');
+        const ctx = canvas.getContext('2d');
+        eval(canvasCode); // Render the canvas dynamically
+        ctx.fillStyle = '#1DA1F2';
+        ctx.fill();
+        document.getElementById('copy-canvas').addEventListener('click', () => {
+          navigator.clipboard.writeText(canvasCode).then(() => {
+            Swal.fire('Copied!', 'Canvas path code has been copied to clipboard.', 'success');
+          });
+        });
+      }
+    });
   }
 });
