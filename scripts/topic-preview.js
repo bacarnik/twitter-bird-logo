@@ -15,7 +15,7 @@ function openPreview(card) {
     title: 'Preview',
     html: `<div id="previewBox" style="text-align:center"></div>`,
     showCancelButton: true,
-    showConfirmButton: true,//xxxx
+    showConfirmButton: false,//xxxx
     confirmButtonText: 'Copy SVG',
     cancelButtonText: 'Download PNG',
     confirmButtonColor: '#1DA1F2',
