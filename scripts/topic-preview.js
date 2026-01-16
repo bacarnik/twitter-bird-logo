@@ -15,7 +15,7 @@ function openPreview(card) {
     title: 'Preview',
     html: `<div id="previewBox" style="text-align:center"></div>`,
     showCancelButton: true,
-    showConfirmButton: true,
+    showConfirmButton: true,//xxxx
     confirmButtonText: 'Copy SVG',
     cancelButtonText: 'Download PNG',
     confirmButtonColor: '#1DA1F2',
@@ -116,7 +116,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       title: 'Twitter PNG',
       html: `<img src="${imgSrc}" alt="Twitter PNG" style="max-width: 100%; display: block; margin: auto;">
              <button id="download-png" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Download</button>`,
-      showConfirmButton: true,
+      showConfirmButton: false,//xxxx
       confirmButtonColor: '#1DA1F2',
       didRender: () => {
         document.getElementById('download-png').addEventListener('click', () => {
