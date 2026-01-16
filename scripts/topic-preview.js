@@ -135,11 +135,16 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       html: `<div>${svgPath}</div>
              <button id="copy-svg" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy SVG Code</button>`,
       showConfirmButton: false,
-      confirmButtonColor: '#1DA1F2',
+        
       didRender: () => {
         document.getElementById('copy-svg').addEventListener('click', () => {
           navigator.clipboard.writeText(svgPath).then(() => {
-            Swal.fire('Copied!', 'SVG code has been copied to clipboard.', 'success');
+            Swal.fire({
+              title: 'Copied!',
+              text: 'SVG code has been copied to clipboard.',
+              icon: 'success',
+              confirmButtonColor: '#1DA1F2'
+            });
           });
         });
       }
@@ -165,7 +170,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
               title: 'Copied!',
               text: 'Canvas path code has been copied to clipboard.',
               icon: 'success',
-              confirmButtonColor: '#1DA1F2' // stari Twitter modri
+              confirmButtonColor: '#1DA1F2' 
             });
           });
         });
