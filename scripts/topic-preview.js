@@ -130,7 +130,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
     </svg>`;
     Swal.fire({
       title: 'Twitter SVG',
-      html: `${svgPath}
+      html: `<div>${svgPath}</div>
              <button id="copy-svg" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy SVG Code</button>`,
       showConfirmButton: false,
       didRender: () => {
