@@ -15,7 +15,7 @@ function openPreview(card) {
     title: 'Preview',
     html: `<div id="previewBox" style="text-align:center"></div>`,
     showCancelButton: true,
-    showConfirmButton: false,//xxxx
+    showConfirmButton: true,
     confirmButtonText: 'Copy SVG',
     cancelButtonText: 'Download PNG',
     confirmButtonColor: '#1DA1F2',
@@ -116,7 +116,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       title: 'Twitter PNG',
       html: `<img src="${imgSrc}" alt="Twitter PNG" style="max-width: 100%; display: block; margin: auto;">
              <button id="download-png" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Download</button>`,
-      showConfirmButton: false,//xxxx
+      showConfirmButton: true,
       confirmButtonColor: '#1DA1F2',
       didRender: () => {
         document.getElementById('download-png').addEventListener('click', () => {
@@ -134,7 +134,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       title: 'Twitter SVG',
       html: `<div>${svgPath}</div>
              <button id="copy-svg" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy SVG Code</button>`,
-      showConfirmButton: true,
+      showConfirmButton: false,
         
       didRender: () => {
         document.getElementById('copy-svg').addEventListener('click', () => {
@@ -156,7 +156,7 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
       title: 'Twitter Canvas',
       html: `<canvas id="dynamicCanvas" width="512" height="512" style="display: block; margin: auto; border: 1px solid #000;"></canvas>
              <button id="copy-canvas" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy Canvas Path</button>`,
-      showConfirmButton: true,
+      showConfirmButton: false,
       confirmButtonColor: '#1DA1F2',
       didRender: () => {
         const canvas = document.getElementById('dynamicCanvas');
