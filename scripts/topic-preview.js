@@ -154,11 +154,16 @@ document.querySelector('.topics-grid').addEventListener('click', (event) => {
     const canvasCode = canvasPathCode();
     Swal.fire({
       title: 'Twitter Canvas',
-      html: `<canvas id="dynamicCanvas" width="512" height="512" style="display: block; margin: auto; border: 1px solid #000;"></canvas>
+      html: `<canvas id="dynamicCanvas" width="512" height="512" style="display: block; margin: auto; border: none"></canvas>
              <button id="copy-canvas" style="margin-top: 10px; padding: 10px 20px; background-color: #1DA1F2; color: white; border: none; cursor: pointer;">Copy Canvas Path</button>`,
       showConfirmButton: false,
       confirmButtonColor: '#1DA1F2',
       didRender: () => {
+        // Adjust SweetAlert padding/margin for canvas
+        const htmlContainer = document.querySelector('.swal2-html-container');
+        htmlContainer.style.padding = '0';
+        htmlContainer.style.margin = '0';
+
         const canvas = document.getElementById('dynamicCanvas');
         const ctx = canvas.getContext('2d');
         eval(canvasCode); // Render the canvas dynamically
