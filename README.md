@@ -16,11 +16,11 @@ A front-end **Twitter clone** inspired by the classic Twitter layout, built to d
 
 - Classic **Twitter-style layout** with header, navigation, content grid, sidebar, and footer  
 - Twitter bird logo available in **multiple formats**:
-  - **PNG** (static image)  
-  - **SVG** (scalable vector graphic with copy-to-clipboard functionality)  
-  - **Canvas** (rendered dynamically via JavaScript)  
+  - **PNG** – static image  
+  - **SVG** – scalable vector graphic with **copy-to-clipboard functionality**  
+  - **Canvas** – rendered dynamically via JavaScript  
 - Interactive **topic cards**:
-  - Click to preview the logo in a modal (SweetAlert2)  
+  - Click to preview the logo in a **modal (SweetAlert2)**  
   - **Download PNG or SVG** directly  
   - **Copy SVG code** or **Canvas drawing commands** to clipboard  
 - Fully responsive **grid layout** for topics  
@@ -30,13 +30,13 @@ A front-end **Twitter clone** inspired by the classic Twitter layout, built to d
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Semantic structure  
-- **CSS3** – Styling, flexbox, grid layouts, responsive design  
+- **HTML5** – Semantic markup and structure  
+- **CSS3** – Flexbox, Grid layouts, responsive design  
 - **JavaScript (ES6)** – DOM manipulation, event listeners, Canvas API, clipboard and download functionality  
-- **SweetAlert2** – Modal previews for topics  
+- **SweetAlert2** – Modal previews for topic cards  
 - **SVG** – Scalable vector graphics for logos  
-- **Canvas API** – Dynamic drawing of Twitter bird  
-- **GitHub Pages** – Hosting the live demo
+- **Canvas API** – Dynamic drawing of the Twitter bird  
+- **GitHub Pages** – Hosting the live demo  
 
 ---
 
@@ -67,21 +67,21 @@ A front-end **Twitter clone** inspired by the classic Twitter layout, built to d
 ## 💡 How It Works
 
 1. **Topic Cards** – Each card represents a Twitter bird in a different format.  
-2. **Click Preview** – Opens a SweetAlert2 modal:
-   - PNG: shows the image and allows downloading  
-   - SVG: shows the logo as a PNG preview but copy returns full SVG code  
-   - Canvas: shows the drawing and copy returns the exact JS canvas commands  
-3. **Copy & Download** – Uses `navigator.clipboard` and `Blob` objects for reliable cross-browser support.  
+2. **Click Preview** – Opens a **SweetAlert2 modal**:
+   - **PNG**: shows the static image and allows downloading  
+   - **SVG**: shows a preview but copying returns the full SVG code  
+   - **Canvas**: shows the drawing and copying returns the exact JS Canvas commands  
+3. **Copy & Download** – Uses `navigator.clipboard` and `Blob` objects for reliable cross-browser support  
 
 ---
 
 ## 🎯 Goals / Learning Outcomes
 
 - Understanding differences between **raster (PNG)** and **vector (SVG)** graphics  
-- Learning to **render graphics on HTML canvas** dynamically  
+- Learning to **render graphics on HTML Canvas dynamically**  
 - Implementing **copy-to-clipboard and download features** for web graphics  
 - Building **interactive UI elements** with modals (SweetAlert2)  
-- Structuring a **front-end project** with reusable components  
+- Structuring a **front-end project** with reusable components   
 
 ---
 
