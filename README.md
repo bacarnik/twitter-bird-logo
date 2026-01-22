@@ -6,7 +6,7 @@ A front-end **Twitter clone** inspired by the classic Twitter layout, built to d
 
 ## 🖥️ Website Preview
 
-<img width="1197" height="840" alt="Website Preview" src="https://github.com/user-attachments/assets/7ecf82ea-5c11-42fd-bcd8-339ccd21f3d4" />
+<img width="1216" height="951" alt="image" src="https://github.com/user-attachments/assets/bcf818fd-a3c6-43b2-aa58-735c89447614" />
 
 🔗 **Live Demo:** [https://bacarnik.github.io/twitter-bird-logo/](https://bacarnik.github.io/twitter-bird-logo/)
 
